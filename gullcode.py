@@ -25,7 +25,7 @@ def is_prime(n: int) -> bool:
     return True
 
 
-def nth_prime(n):
+def nth_prime(n: int) -> int:
     # Comment out if program gets too slow
     assert (type(n) == int), 'Argument must be integer.'
     if n == 1:
