@@ -5,6 +5,9 @@ import math
 
 """
 This file has functions for Gull Code.
+
+1) is_prime()
+2) nth_prime()
 """
 
 
