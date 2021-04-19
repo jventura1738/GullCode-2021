@@ -2,12 +2,14 @@
 # Gull Code 2021
 
 import math
+import numpy as np
 
 """
 This file has functions for Gull Code.
 
 1) is_prime()
 2) nth_prime()
+3) regression()
 """
 
 
@@ -41,5 +43,28 @@ def nth_prime(n: int) -> int:
         i += 2
 
 
+def _loss(alpha, beta, xi, yi):
+    return xi*beta + alpha - yi
+
+
+def _step(start, grad, rate):
+    return np.array(start) - np.array(grad) * rate
+
+
+def regression(xys):
+    iters = 10000
+    gamma = 0.001
+    alpha, beta = 0, 1
+
+    for _ in range(iters):
+        grad_b = np.sum([2 * xi * _loss(alpha, beta, xi, yi) for (xi, yi) in xys])
+        grad_a = np.sum([2 * _loss(alpha, beta, xi, yi) for (xi, yi) in xys])
+        res = _step([alpha, beta], [grad_a, grad_b], gamma)
+        alpha, beta = res
+
+    return [alpha, beta]
+
+
 if __name__ == '__main__':
-    print(nth_prime(6969))
+    s = [(i,3*i+ 4) for i in range(0,10)]
+    print(regression(s))
