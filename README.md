@@ -1,3 +1,3 @@
-# Gull Code 2021 Spring
+# Gull Code 2021 WINNING TEAM (JUSTIN VENTURA, JACOB DUNCAN, BLAINE MASON)
 
 Gull Code 2021 Coding Competition
