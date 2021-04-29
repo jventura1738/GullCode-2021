@@ -15,7 +15,7 @@ This file has functions for Gull Code.
 
 def is_prime(n: int) -> bool:
     # Comment out if program gets too slow
-    assert(type(n) == int), 'Argument must be integer.'
+    # assert(type(n) == int), 'Argument must be integer.'
 
     if n is 2:
         return True
@@ -31,7 +31,7 @@ def is_prime(n: int) -> bool:
 
 def nth_prime(n: int) -> int:
     # Comment out if program gets too slow
-    assert (type(n) == int), 'Argument must be integer.'
+    # assert (type(n) == int), 'Argument must be integer.'
 
     p = 1
     i = 1
